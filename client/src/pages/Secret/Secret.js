@@ -13,9 +13,9 @@ class Secret extends Component {
   }
 
   componentDidMount() {
-    API.Secrets.getAll(this.context.authToken)
+    API.Forms.getAll(this.context.authToken)
       .then(response => response.data)
-      .then(secrets => this.setState({ secrets }))
+      .then(forms => this.setState({ forms }))
       .catch(err => {
         if (err.response.status === 401) {
           return this.setState({ error: "Unauthorized. Please login." });
@@ -28,7 +28,7 @@ class Secret extends Component {
 
   render() {
     return (
-      <div className='Secret'>
+      <div className='Form'>
         <div className='row'>
           <div className='col'>
             {this.state.isLoading
@@ -36,8 +36,8 @@ class Secret extends Component {
               : this.state.error
                 ? <div className='alert alert-danger'>{this.state.error}</div>
                 : <div>
-                  <p>Shh, the secret is...</p>
-                  <p><em>{this.state.secrets[0].message}</em></p>
+                  <p>Galleries</p>
+                  <p><em>{this.state.forms[0].Name}</em></p>
                 </div>}
           </div>
         </div>

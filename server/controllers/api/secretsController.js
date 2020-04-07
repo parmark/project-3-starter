@@ -5,7 +5,6 @@ const { JWTVerifier } = require('../../lib/passport');
 
 secretsController.post('/', (req, res) => {
  
-
   db.Secrets.create({})
     .then(user => res.json(user))
     .catch(err => res.json(err));

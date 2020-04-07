@@ -18,14 +18,16 @@ export default {
       });
     }
   },
-
-  Secrets: {
+  Forms: {
     getAll: function (authToken) {
-      return axios.get('/api/secrets', {
+      return axios.get('/api/galleries', {
         headers: {
           'Authorization': `Bearer ${authToken}`
         }
       });
+    },
+    create: function (name) {
+        return axios.post('/api/galleries', {name});
     }
   }
 }
