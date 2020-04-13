@@ -30,7 +30,6 @@ class UploadForm extends React.Component {
       //fetch()
       const theFile = document.getElementById('file').files[0]
       API.Users.upload(theFile, this.context.authToken).then(res=>console.log(res))
-
     }
   
     render() {

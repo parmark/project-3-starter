@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Modal, Button } from 'react-bootstrap'
 import Slideshow from '../Slideshow'
 import './style.css'
@@ -7,6 +7,7 @@ function Gallery(props) {
 
     const [show, setShow] = useState(false);
     const [interval, setInterval] = useState(30000);
+    // const [images,setImages] = useState([]);
 
     const handleTime = time => {
         setInterval(time)
