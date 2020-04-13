@@ -36,3 +36,11 @@ margin-left: 15%;
     color: #d5aca9;
     color:#C1CAD6 ;
 }
+
+.img-div{
+    height: 1%;
+}
+
+.img-fluid{
+    object-fit: contain;
+}

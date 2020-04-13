@@ -30,14 +30,12 @@ function HomePage(props) {
           <Carousel interval="10000">
             {props.homeGallery.map((image) =>
 
-              <Carousel.Item>
+              <Carousel.Item key={image.alt}>
                 <div>
-                  <DrawModal image={image.image} src={image.image} alt={"image.alt"} key={image.name} />
+                  <DrawModal show={show} image={image.image} src={image.image} alt={"image.alt"}/>
                   <img className="img-fluid" src={image.image} alt={image.alt} />
                 </div>
 
-
-                {console.log(image)}
               </Carousel.Item>)}
           </Carousel>
           <button onClick={handleShow} className="btn btn drawbtn">Draw Me</button>
@@ -45,8 +43,8 @@ function HomePage(props) {
       </div>
     </div>
     <footer className="home-footer">
-      copyright...
-   </footer>
+      Copyright&copy;
+</footer>
 
 
   </>

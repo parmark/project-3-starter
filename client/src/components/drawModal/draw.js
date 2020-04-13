@@ -24,7 +24,7 @@ function DrawModal(props) {
           </Button>
         </Modal.Footer>
       </Modal>
-  </>
-  )
+      
+  </>)
 }
 export default DrawModal

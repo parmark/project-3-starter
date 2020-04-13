@@ -44,12 +44,12 @@ class App extends Component {
       },
       {
         
-        alt:"A sketch of a wold",
-        image:"https://paintingvalley.com/sketches/sketch-a-wolf-23.jpg"
+        alt:"A sketch of an eye",
+        image:"https://images.template.net/wp-content/uploads/2017/01/26001821/Best-Sketch-Drawing-Ideas.jpg"
       },
       {
-        alt:"A sketch of Deku",
-        image:"https://i.pinimg.com/originals/86/0d/da/860ddae3f7e378a2e8e9450e6518d877.jpg"
+        alt:"A sketch of a hand",
+        image:"https://cdn.clipart.email/ec6831db71bb28893f1d8dda0a7f1561_check-out-the-28-cool-drawing-ideas-for-unleashing-the-creativity-_600-450.jpeg"
       },
       {
         alt:"A sketch of a sad woman",
@@ -64,8 +64,8 @@ class App extends Component {
         image:"https://i.pinimg.com/originals/29/53/7a/29537a687d5a399483294ed3bebe22aa.jpg"
       },
       {
-        alt:"a sketch of woman wearing glasses",
-        image:"https://clip.cookdiary.net/sites/default/files/wallpaper/drawn-portrait/345000/drawn-portrait-easy-sketch-345000-2227516.jpg"
+        alt:"a sketch of a tree and hand combined",
+        image:"https://i.pinimg.com/originals/09/c2/05/09c205dd791dd2e11a8396127f5b7ddb.jpg"
       },
       {
         alt:"a sketch of a landscape",
