@@ -4,14 +4,9 @@ import "./style.css"
 
 function DrawModal(props) {
 
-  const [show, setShow] = useState(false)
-  
-  const handleClose = () => setShow(false)
-  
-  
   return (<>
 
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={props.show} onHide={props.handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Draw</Modal.Title>
         </Modal.Header>
@@ -19,12 +14,13 @@ function DrawModal(props) {
           <img className='card-img-top h-auto' src={props.image} alt={props.alt} />
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="dark" onClick={handleClose}>
+          
+          <Button variant="dark" onClick={props.handleClose}>
             Close
           </Button>
         </Modal.Footer>
       </Modal>
-  </>
-  )
+
+  </>)
 }
 export default DrawModal

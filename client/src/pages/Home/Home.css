@@ -33,6 +33,7 @@ body {
 
 .container {
     overflow: hidden;
+   
 }
 
 .fade-in {
@@ -80,8 +81,15 @@ body {
 margin-left: 15%;
 }
 
-.hex{
-    color:#C1B4AE ;
-    color: #d5aca9;
-    color:#C1CAD6 ;
+.carousel{
+    align-self: center;
+    margin-right: 10%;
+}
+
+.img-div{
+    height: 1%;
+}
+
+.img-fluid{
+    object-fit: contain;
 }
