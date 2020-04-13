@@ -6,10 +6,12 @@ import AuthContext from '../../contexts/AuthContext'
 function Galleries(props) {
      const value = useContext(AuthContext)
      console.log('yo', value.user)
+
     return (
         <div>
             <UploadForm />
-            <div className='galleries'>
+            <hr className='transparent-hr' />
+            <div className='galleries fade-in'>
                 {value.user && value.user.galleries.map((image, index)=>(
                     <Gallery
                         id={index}
