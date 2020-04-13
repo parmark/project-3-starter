@@ -6,9 +6,32 @@ import { Carousel } from 'react-bootstrap'
 function HomePage(props) {
 
   const [show, setShow] = useState(false)
+  
+  const [currentImg,setCurrentImg] = useState(props.homeGallery[0])
+
+  const [interval,setInterval] = useState(10000)
+
+  const [timer,setTimer] = useState()
 
 
-  const handleShow = () => setShow(true)
+
+
+  const handleShow = () =>{
+    setShow(true)
+    setInterval(null)
+    
+  } 
+    
+  const handleClose = () => {
+    setShow(false)
+    setInterval(10000)
+  }
+
+  const handleSelect = (i) =>{
+    setCurrentImg(props.homeGallery[i])
+  }
+
+  
 
 
   return (
@@ -23,17 +46,17 @@ function HomePage(props) {
       <div className="row">
         <div className="col-9 move-right fade-in">
 
-          <Carousel interval="10000">
+          <Carousel interval={interval} onSelect={handleSelect}>
             {props.homeGallery.map((image) =>
 
               <Carousel.Item key={image.alt}>
                 <div>
-                  <DrawModal show={show} image={image.image} src={image.image} alt={"image.alt"}/>
                   <img className="img-fluid" src={image.image} alt={image.alt} />
                 </div>
 
               </Carousel.Item>)}
           </Carousel>
+                  <DrawModal show={show} image={currentImg.image} src={currentImg.image} alt={currentImg.alt} handleClose={handleClose}/>
           <button onClick={handleShow} className="btn btn drawbtn">Draw Me</button>
         </div>
       </div>
