@@ -6,11 +6,13 @@ function Gallery(props) {
 
     const [show, setShow] = useState(false);
     const [counter, setCounter] = useState();
+    const [loadBarWidth, setLoadBarWidth] = useState(); 
 
     const handleClose = () => setShow(false);
     const handleShow = (seconds) => {
         setShow(true);
         setCounter(seconds)
+        setLoadBarWidth(seconds)
     }
 
     useEffect(() => {
@@ -64,7 +66,10 @@ function Gallery(props) {
                         />
                 </Modal.Body>
                 <Modal.Footer>
-    <span className='loading-bar text-center' style={{width: (counter * 1.25)}}></span>
+                    <span className='loading-bar' style={{width: loadBarWidth + 4}}>
+                    <div className='loading-fill text-center' style={{width: counter}}>
+                    </div>
+                    </span>
                 </Modal.Footer>
             </Modal>
         </div>
