@@ -37,18 +37,20 @@ function Gallery(props) {
                         className='invis-btn'
                         onClick={() => {handleShow(60)}}
                     >
-                        30s
+                        1 Min
                     </button>
                     <button        
                         className='invis-btn'
                         onClick={() => {handleShow(120)}}
                     >
-                        60s
+                        2 Min
                     </button>
                     <button 
                         className='invis-btn'
                         onClick={() => {handleShow(300)}}
-                    >90s</button>
+                    >
+                        5 Min
+                    </button>
                 </div>
             </div>
 
