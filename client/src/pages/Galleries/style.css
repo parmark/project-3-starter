@@ -26,8 +26,6 @@
     100% {
         opacity: 1;
     }
-<<<<<<< HEAD
-=======
 }
 
 @media screen and (max-width:768px) {
@@ -52,5 +50,4 @@
     .galleries {
         column-count: 4
     }
->>>>>>> f3a0fa651e9a824c6c344171d099796c07727f96
 }
