@@ -35,36 +35,35 @@ function Gallery(props) {
                 <div className='btns'>
                     <button 
                         className='invis-btn'
-                        onClick={() => {handleShow(30)}}
+                        onClick={() => {handleShow(60)}}
                     >
                         30s
                     </button>
                     <button        
                         className='invis-btn'
-                        onClick={() => {handleShow(60)}}
+                        onClick={() => {handleShow(120)}}
                     >
                         60s
                     </button>
                     <button 
                         className='invis-btn'
-                        onClick={() => {handleShow(90)}}
+                        onClick={() => {handleShow(300)}}
                     >90s</button>
                 </div>
             </div>
 
             <Modal className='modalmodal' show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                    <Modal.Title className='col-11 text-center'>
-                        <p>{counter}</p>
-                    </Modal.Title>
-                </Modal.Header>
+                <Modal.Header closeButton></Modal.Header>
                 <Modal.Body>
                         <img 
-                            className="d-block w-100"
+                            className="d-block w-100 modalContent"
                             src={props.images}
                             alt='timed slide'
                         />
                 </Modal.Body>
+                <Modal.Footer>
+    <span className='loading-bar text-center' style={{width: (counter * 1.25)}}></span>
+                </Modal.Footer>
             </Modal>
         </div>
     )

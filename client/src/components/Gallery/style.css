@@ -4,8 +4,15 @@
     object-fit: cover;
 }
 
-.modalmodal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.loading-holder {
+    display: inline-flex;
+}
+
+.loading-bar {
+    background-color: white;
+    border: solid;
+    border-color: black;
+    border-width: 1px;
+    padding-top: 10px;
+    margin: auto;
 }
