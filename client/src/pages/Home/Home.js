@@ -57,11 +57,6 @@ function HomePage(props) {
           </div>
         </div>
       </div>
-      <footer className="home-footer">
-        Copyright&copy;
-</footer>
-
-
     </div>
   );
 }
