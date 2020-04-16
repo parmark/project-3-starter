@@ -67,7 +67,7 @@ function Gallery(props) {
                 </Modal.Body>
                 <Modal.Footer>
                     <span className='loading-bar' style={{width: loadBarWidth + 4}}>
-                    <div className='loading-fill text-center' style={{width: counter}}>
+                    <div className='loading-fill text-center' style={{width: loadBarWidth - counter}}>
                     </div>
                     </span>
                 </Modal.Footer>
