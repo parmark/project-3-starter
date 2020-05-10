@@ -1,36 +1,13 @@
 import React, { useState } from 'react';
-import DrawModal from "../../components/drawModal/draw"
 import Gallery from "../../components/Gallery"
 import "./Home.css"
 import { Carousel } from 'react-bootstrap'
 
 function HomePage(props) {
 
-  const [show, setShow] = useState(false)
+  const [show] = useState(false)
 
-  const [currentImg, setCurrentImg] = useState(props.homeGallery[0])
-
-  const [interval, setInterval] = useState(10000)
-
-
-
-
-  const handleShow = () => {
-    setShow(true)
-    setInterval(null)
-  }
-
-  const handleClose = () => {
-    setShow(false)
-    setInterval(10000)
-  }
-
-  const handleSelect = (i) => {
-    setCurrentImg(props.homeGallery[i])
-  }
-
-
-
+  const [interval] = useState(10000)
 
   return (
     <div>
@@ -44,7 +21,7 @@ function HomePage(props) {
         <div className="row">
           <div className="col-9 move-right fade-in">
 
-            <Carousel className="carousel" interval={interval} indicators={false} onSelect={handleSelect}>
+            <Carousel className="carousel" interval={interval} indicators={false}>
               {props.homeGallery.map((image) =>
 
                 <Carousel.Item key={image.alt}>

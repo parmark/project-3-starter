@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
-
 import API from '../../lib/API';
 import TokenStore from '../../lib/TokenStore';
 import AuthContext from '../../contexts/AuthContext';
 import Navigation from '../../components/Navigation/Navigation';
-import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
 import Home from '../../pages/Home/Home';
 import Login from '../../pages/Login/Login';
 import Register from '../../pages/Register/Register';
 import Galleries from '../../pages/Galleries'
-import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
-
 import './App.css';
 
 class App extends Component {

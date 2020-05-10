@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Modal, Button } from 'react-bootstrap'
+import { Modal } from 'react-bootstrap'
 import './style.css'
 
 function Gallery(props) {
@@ -22,7 +22,7 @@ function Gallery(props) {
                 clearTimeout(t)
             }
         }
-    }, [counter]);
+    }, [counter, show]);
 
     useEffect(() => {
         if (counter === 0) {
@@ -33,7 +33,7 @@ function Gallery(props) {
     return (
         <div>
             <div className='image-holder'>
-                {<img className='image' src={props.images}/>}
+                {<img className='image' src={props.images} alt='upload'/>}
                 <div className='btns'>
                     <button 
                         className='invis-btn'
