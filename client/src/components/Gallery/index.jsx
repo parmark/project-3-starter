@@ -56,15 +56,17 @@ function Gallery(props) {
                 </div>
             </div>
 
-            <Modal className='modalmodal' show={show} onHide={handleClose}>
+            <Modal 
+                show={show} 
+                onHide={handleClose}
+                dialogClassName='dynamic-modal'
+            >
                 <Modal.Header closeButton></Modal.Header>
-                <Modal.Body>
-                        <img 
-                            className="d-block w-100 modalContent"
-                            src={props.images}
-                            alt='timed slide'
-                        />
-                </Modal.Body>
+                    <img 
+                        className="modalContent"
+                        src={props.images}
+                        alt='timed slide'
+                    />
                 <Modal.Footer>
                     <span className='loading-bar' style={{width: loadBarWidth + 4}}>
                     <div className='loading-fill text-center' style={{width: loadBarWidth - counter}}>

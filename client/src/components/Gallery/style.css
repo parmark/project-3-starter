@@ -14,3 +14,13 @@
     height: 15px;
     background-color: rgb(71, 71, 71);
 }
+
+/* Resizes bootstrap modal to fit screen */
+.dynamic-modal {
+    min-width: 70vw;
+}
+
+.modalContent {
+    max-height: 75vh;
+    object-fit: contain;
+}
